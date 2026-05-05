@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toss App (Head/Tail)</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .heading {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .tossBox {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .tossImg {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+            border: 1px solid black;
+            background-color: #C30E83;
+        }
+
+        .btn:hover {
+            background-color: #a50c70;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Toss App (Head/Tail)</h1>
+    <h1 class="heading">Toss App (Head/Tail)</h1>
+    <div class="tossBox">
+        <img class="tossImg" src="head.png" alt="" srcset="">
+    </div>
+    <button class="btn">Flip the coin!</button>
 </body>
 <script>
-    
+
+    let flipBtn = document.querySelector(".btn")
+    let tossImg = document.querySelector(".tossImg")
+
+    flipBtn.addEventListener("click", () => {
+        let random = Math.ceil(Math.random() * 2)
+        console.log(random);
+
+        if (random == 1) {
+            tossImg.src = "head.png"
+        }
+        else {
+            tossImg.src = "tail.png"
+        }
+    })
+
+
 </script>
+
 </html>
