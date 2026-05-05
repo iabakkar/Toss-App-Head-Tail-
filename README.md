@@ -1,6 +1,4 @@
-# Toss-App-Head-Tail-
-
-# 🪙 Toss App (Head/Tail)
+# Toss App (Head/Tail)
 
 A fun coin toss simulation using JavaScript.
 
